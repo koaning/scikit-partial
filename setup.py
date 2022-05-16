@@ -14,7 +14,7 @@ dev_packages = [
 
 
 setup(
-    name="skpartial",
+    name="scikit-partial",
     version="0.1.0",
     packages=find_packages(exclude=["notebooks"]),
     install_requires=base_packages,
