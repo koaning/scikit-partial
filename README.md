@@ -1,7 +1,3 @@
-# scikit-partial
-
-Pipeline components that support partial_fit.
-
 <img src="img.png" width=175 align="right">
 
 # scikit-partial
