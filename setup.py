@@ -9,11 +9,12 @@ dev_packages = [
     "pre-commit>=2.17.0",
     "interrogate>=1.5.0",
     "black>=22.1.0",
+    "pandas>=1.0.0",
 ]
 
 
 setup(
-    name="scikit-partial",
+    name="skpartial",
     version="0.1.0",
     packages=find_packages(exclude=["notebooks"]),
     install_requires=base_packages,
