@@ -44,3 +44,18 @@ for i in range(10):
 When is this pattern useful? Let's consider spelling errors. Suppose that we'd like
 our algorithm to be robust against typos. Then we can simulate typos on our `X` inside
 of our learning loop. 
+
+## Supported Components 
+
+The following pipeline components are added.
+
+```python
+from skpartial.pipeline import (
+    PartialPipeline,
+    PartialFeatureUnion,
+    make_partial_pipeline,
+    make_partial_union,
+)
+```
+
+These tools allow you to declare pipelines that support `.partial_fit()`. Note that components used in these pipelines all need to have `.partial_fit()` implemented.
