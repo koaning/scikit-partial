@@ -36,7 +36,7 @@ df = pd.read_csv(url)
 X, y = list(df['text']), df['label']
 
 # Construct a pipeline with components that are `.partial_fit()` compatible
-pipe = make_partial_pipeline(HashingVectorizer(), SGDClassifier(loss="log"))
+pipe = make_partial_pipeline(HashingVectorizer(), SGDClassifier(loss="log_loss"))
 
 # Run the learning algorithm on batches of data
 for i in range(10):
