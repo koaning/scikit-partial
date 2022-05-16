@@ -2,7 +2,7 @@
 
 Pipeline components that support partial_fit.
 
-<img src="icepickle.png" width=175 align="right">
+<img src="img.png" width=175 align="right">
 
 # scikit-partial
 
@@ -40,25 +40,10 @@ pipe = make_partial_pipeline(HashingVectorizer(), SGDClassifier(loss="log"))
 
 # Run the learning algorithm on batches of data
 for i in range(10):
+    # We could also do a whole bunch of data augmentation here!
     pipe.partial_fit(X, y)
 ```
 
 When is this pattern useful? Let's consider spelling errors. Suppose that we'd like
 our algorithm to be robust against typos. Then we can simulate typos on our `X` inside
-of our for-loop. 
-
-```python
-# Construct a pipeline with components that are `.partial_fit()` compatible
-# Note that we are now encoding substrings! 
-pipe = make_partial_pipeline(
-    HashingVectorizer(ngram_range="char", ngram_range=(2, 3)), 
-    SGDClassifier(loss="log")
-)
-
-# Run the learning algorithm on batches of data
-for i in range(10):
-    pipe.partial_fit(apply_spelling_errors(X), y)
-```
-
-By using this pattern, we may get a pipeline that's more robust
-against typos! 
+of our learning loop. 
