@@ -12,6 +12,7 @@ The goal of **scikit-partial** is to offer a pipeline that can run
 You can install everything with `pip`:
 
 ```
+python -m pip install --upgrade pip
 python -m pip install scikit-partial
 ```
 
