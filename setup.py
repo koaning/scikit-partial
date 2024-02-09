@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-base_packages = ["scikit-learn>=0.24.0"]
+base_packages = ["scikit-learn>=1.0.0"]
 
 dev_packages = [
     "flake8>=3.6.0",
