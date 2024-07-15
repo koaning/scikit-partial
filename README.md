@@ -1,6 +1,6 @@
-<img src="img.png" width=175 align="right">
+<img src="img.png" width=150 align="right">
 
-# scikit-partial
+### scikit-partial
 
 > Pipeline components that support partial_fit.
 
